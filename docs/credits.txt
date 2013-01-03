@@ -1,0 +1,17 @@
+Shoutit 2.x & 3.x:
+-------------------
+Gabriel Freinbichler
+Philippe Baudrion - UniGE/FTI: Zikula 1.3.x refactoring
+
+shoutit 1.x:
+--------------
+
+People who support me with code or ideas:
+-----------------------------------------
+
+Karl Pütz aka Charlie
+Frank Schummertz aka Landseer
+Sascha Jost aka Lindbergh
+Axel Guckelsberger aka guite
+Steffen Voß aka kaffeeringe.de
+Yentl K. Langholz aka TheRealOne

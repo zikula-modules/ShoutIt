@@ -1,0 +1,15 @@
+/**
+ * Shoutit module for Zikula
+ * @author       Gabriel Freinbichler & refactored by Philippe Baudrion UniGE/FTI
+ */
+.shoutit_contentwrap{border:1px dashed #CCCCCC;height:200px;margin-bottom:5px;overflow: auto;}
+.shoutit_content{font-size:0.9em;margin:5px;}
+.shoutit_content .si_name{font-size:0.95em;font-weight:bold;padding-right:5px;}
+.shoutit_content .si_name span {color:#999;}
+.shoutit_content .si_message {line-height: 1.2em;margin: 0 0 8px 0;padding: 0;}
+.shoutit_inputwrap{}
+.shoutit_counterwrap{float:right;}
+.shoutit_counter{width:2.2em;border:none;}
+.shoutit_message{border:1px solid #CCCCCC;margin:3px 0px;padding:3px 2px; width:97%}
+.shoutit_button{margin-top: 4px;}
+.shoutit_input .bb_standardsmilies{width:99% !important;}

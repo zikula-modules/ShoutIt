@@ -1,0 +1,10 @@
+// File : $Id$
+
+1.0 - Initial Release
+2.x - API compliant Zikula v.1.2.x requires core version 1.2.0 minimum
+3.0 - API compliant Zikula v.1.3.x requires core version 1.3.0 minimum
+  - Zikula 1.3 native refactor
+  - New features:   - Send a message to a specific group only
+                    - Block settings available :    length of a message,
+                                                    number of messages displayed,
+                                                    refresh rate (common to all Shoutit blocks)

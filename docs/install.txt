@@ -1,0 +1,13 @@
+// File : $Id$
+Installation like any other Zikula modules
+The "group messages" setting requires permission: ('Groups::', '::', ACCESS_READ)
+
+TO-KNOW
+
+Permission scheme
+-----------------
+ACCESS_OVERVIEW : minimal access to display the block
+ACCESS_COMMENT  : minimal access to post
+                  if "Owner and group messages" is checked, users can read and post to restricted groups only
+ACCESS_MODERATE : if "Owner and group messages" is checked, no restriction is applied users view all messages and can post in all groups.
+ACCESS_DELETE   : minimal access to clear the block content
