@@ -1,6 +1,6 @@
 <?php
 /**
- * Shoutit module for Zikula Application Framework
+ * ShoutIt module for Zikula Application Framework
  *
  * @author       Gabriel Freinbichler
  *              refactored for zk 1.3 by Philippe Baudrion - UniGE/FTI
@@ -9,7 +9,7 @@
  * @license      http://www.gnu.org/copyleft/gpl.html GNU General Public License
  * @version      $Id$
  */
-class Shoutit_Block_Shoutit extends Zikula_Controller_AbstractBlock
+class ShoutIt_Block_ShoutIt extends Zikula_Controller_AbstractBlock
 {
     /**
      * Initialise block.
@@ -92,17 +92,17 @@ class Shoutit_Block_Shoutit extends Zikula_Controller_AbstractBlock
         // defaults
         if (!isset($vars['nbMsg'])) {
             $vars['nbMsg'] = '100';
-            ModUtil::setVar('Shoutit', "shoutit_lastx_messages_{$blockinfo['bid']}", '100');
+            ModUtil::setVar('ShoutIt', "shoutit_lastx_messages_{$blockinfo['bid']}", '100');
         }
         if (!isset($vars['refRate'])) {
-            $vars['refRate'] = ModUtil::getVar('Shoutit', 'shoutit_refresh_rate');
+            $vars['refRate'] = ModUtil::getVar('ShoutIt', 'shoutit_refresh_rate');
         }
         if (!isset($vars['msgLength'])) {
             $vars['msgLength'] = '70';
         }
         if (!isset($vars['grpMsg'])) {
             $vars['grpMsg'] = '0';
-            ModUtil::setVar('Shoutit', "shoutit_group_messages_{$blockinfo['bid']}", '0');
+            ModUtil::setVar('ShoutIt', "shoutit_group_messages_{$blockinfo['bid']}", '0');
         }
         if (!isset($vars['delMsg'])) {
             $vars['delMsg'] = '0';
@@ -131,7 +131,7 @@ class Shoutit_Block_Shoutit extends Zikula_Controller_AbstractBlock
         $msgLength  = ($msgLength >= 20) ? $msgLength : '20';
 
         if($delMsg) {
-            ModUtil::apiFunc('Shoutit', 'user', 'deleteMessages', array(
+            ModUtil::apiFunc('ShoutIt', 'user', 'deleteMessages', array(
                 'bid' => $blockinfo['bid']
                 ));
         }
@@ -143,9 +143,9 @@ class Shoutit_Block_Shoutit extends Zikula_Controller_AbstractBlock
         $vars['grpMsg']     = $grpMsg;
         $vars['delMsg']     = '0';
 
-        ModUtil::setVar('Shoutit', "shoutit_lastx_messages_{$blockinfo['bid']}", $nbMsg);
-        ModUtil::setVar('Shoutit', 'shoutit_refresh_rate', $refRate);
-        ModUtil::setVar('Shoutit', "shoutit_group_messages_{$blockinfo['bid']}", $grpMsg);
+        ModUtil::setVar('ShoutIt', "shoutit_lastx_messages_{$blockinfo['bid']}", $nbMsg);
+        ModUtil::setVar('ShoutIt', 'shoutit_refresh_rate', $refRate);
+        ModUtil::setVar('ShoutIt', "shoutit_group_messages_{$blockinfo['bid']}", $grpMsg);
 
         $blockinfo['content'] = BlockUtil::varsToContent($vars);
 

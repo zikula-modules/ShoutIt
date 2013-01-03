@@ -1,6 +1,6 @@
 <?php
 /**
- * Shoutit module for Zikula Application Framework
+ * ShoutIt module for Zikula Application Framework
  *
  * @author       Gabriel Freinbichler
  *              refactored for zk 1.3 by Philippe Baudrion - UniGE/FTI
@@ -11,11 +11,11 @@
  */
 
 /**
- * initialise Shoutit module once
+ * initialise ShoutIt module once
  *
  * @return  boolean    true/false
  */
-class Shoutit_Installer extends Zikula_AbstractInstaller
+class ShoutIt_Installer extends Zikula_AbstractInstaller
 {
     public function install()
     {
@@ -26,7 +26,7 @@ class Shoutit_Installer extends Zikula_AbstractInstaller
         }
 
         // Module variables initialisation
-        ModUtil::setVar('Shoutit', 'shoutit_refresh_rate', '8');
+        ModUtil::setVar('ShoutIt', 'shoutit_refresh_rate', '8');
 
         // Register hook
         HookUtil::registerSubscriberBundles($this->version->getHookSubscriberBundles());
@@ -46,7 +46,7 @@ class Shoutit_Installer extends Zikula_AbstractInstaller
         {
             case '2.0':
                 // Module variables initialisation
-                ModUtil::setVar('Shoutit', 'shoutit_refresh_rate', '10');
+                ModUtil::setVar('ShoutIt', 'shoutit_refresh_rate', '10');
                 
                 // Register hook
                 HookUtil::registerSubscriberBundles($this->version->getHookSubscriberBundles());
@@ -55,14 +55,14 @@ class Shoutit_Installer extends Zikula_AbstractInstaller
     }
 
     /**
-     * Deletes Shoutit modules
+     * Deletes ShoutIt modules
      *
      * @return  boolean    true/false
      */
     public function uninstall()
     {
         $result = DBUtil::dropTable('shoutit_messages');
-        $result = $result && ModUtil::delVar('Shoutit');
+        $result = $result && ModUtil::delVar('ShoutIt');
 
         HookUtil::unregisterSubscriberBundles($this->version->getHookSubscriberBundles());
 

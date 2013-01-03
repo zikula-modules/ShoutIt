@@ -1,6 +1,6 @@
 <?php
 /**
- * Shoutit module for Zikula Application Framework
+ * ShoutIt module for Zikula Application Framework
  *
  * @author       Gabriel Freinbichler
  *               refactored for zk 1.3 by Philippe Baudrion - UniGE/FTI
@@ -13,7 +13,7 @@
 /**
  * User API
  */
-class Shoutit_Api_User extends Zikula_AbstractApi
+class ShoutIt_Api_User extends Zikula_AbstractApi
 {
     /**
      * Get all allowed messages from the database
@@ -32,7 +32,7 @@ class Shoutit_Api_User extends Zikula_AbstractApi
         $tables = DBUtil::getTables();
         $shColumn = $tables['shoutit_messages_column'];
         $orderBy= "ORDER BY $shColumn[cr_date] DESC";
-        $limitNumRows  = ModUtil::getVar('Shoutit', "shoutit_lastx_messages_{$bid}");
+        $limitNumRows  = ModUtil::getVar('ShoutIt', "shoutit_lastx_messages_{$bid}");
         $where  = '';
         $joinInfo[] = array (
             'join_table'            => 'users',   // table for the join
@@ -43,8 +43,8 @@ class Shoutit_Api_User extends Zikula_AbstractApi
             );
 
         // Only select user own messages and messages from own registered group(s)
-        if(ModUtil::getVar('Shoutit', "shoutit_group_messages_{$bid}") == '1' &&
-           !SecurityUtil::checkPermission('Shoutit::', $bid.'::', ACCESS_MODERATE)) {
+        if(ModUtil::getVar('ShoutIt', "shoutit_group_messages_{$bid}") == '1' &&
+           !SecurityUtil::checkPermission('ShoutIt::', $bid.'::', ACCESS_MODERATE)) {
             
             $uid = UserUtil::getVar('uid');
             $where = "WHERE $shColumn[cr_uid] = $uid";
@@ -104,7 +104,7 @@ class Shoutit_Api_User extends Zikula_AbstractApi
             return LogUtil::registerArgsError();
         }
 
-        $this->throwForbiddenUnless(SecurityUtil::checkPermission('Shoutit::', $args['bid'].'::', ACCESS_DELETE), LogUtil::getErrorMsgPermission());
+        $this->throwForbiddenUnless(SecurityUtil::checkPermission('ShoutIt::', $args['bid'].'::', ACCESS_DELETE), LogUtil::getErrorMsgPermission());
 
         $tables = DBUtil::getTables();
         $shColumns = $tables['shoutit_messages_column'];

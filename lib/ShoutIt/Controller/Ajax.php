@@ -1,6 +1,6 @@
 <?php
 /**
- * Shoutit module for Zikula Application Framework
+ * ShoutIt module for Zikula Application Framework
  *
  * @author       Gabriel Freinbichler
  *              refactored for zk 1.3 by Philippe Baudrion - UniGE/FTI
@@ -9,7 +9,7 @@
  * @license      http://www.gnu.org/copyleft/gpl.html GNU General Public License
  * @version      $Id$
  */
-class Shoutit_Controller_Ajax extends Zikula_Controller_AbstractAjax
+class ShoutIt_Controller_Ajax extends Zikula_Controller_AbstractAjax
 {
     public function getmessages()
     {
@@ -20,9 +20,9 @@ class Shoutit_Controller_Ajax extends Zikula_Controller_AbstractAjax
             throw new Zikula_Exception_Fatal($this->__('Ajax Error! Missing required parameter.'));
         }
 
-        $this->throwForbiddenUnless(SecurityUtil::checkPermission('Shoutit::', $bid.'::', ACCESS_OVERVIEW), LogUtil::getErrorMsgPermission());
+        $this->throwForbiddenUnless(SecurityUtil::checkPermission('ShoutIt::', $bid.'::', ACCESS_OVERVIEW), LogUtil::getErrorMsgPermission());
 
-        $messages = ModUtil::apiFunc('Shoutit', 'user', 'getMessages', array('bid' => $bid));
+        $messages = ModUtil::apiFunc('ShoutIt', 'user', 'getMessages', array('bid' => $bid));
 
         Zikula_AbstractController::configureView();
         $this->view->setCaching(Zikula_View::CACHE_DISABLED);
@@ -52,9 +52,9 @@ class Shoutit_Controller_Ajax extends Zikula_Controller_AbstractAjax
             throw new Zikula_Exception_Fatal($this->__('Ajax Error! Missing required parameter.'));
         }
 
-        $this->throwForbiddenUnless(SecurityUtil::checkPermission('Shoutit::', $bid.'::', ACCESS_COMMENT), LogUtil::getErrorMsgPermission());
+        $this->throwForbiddenUnless(SecurityUtil::checkPermission('ShoutIt::', $bid.'::', ACCESS_COMMENT), LogUtil::getErrorMsgPermission());
 
-        $result = ModUtil::apiFunc('Shoutit', 'user', 'saveMessages', array(
+        $result = ModUtil::apiFunc('ShoutIt', 'user', 'saveMessages', array(
             'message' => $message,
             'gid' => $gid,
             'bid' => $bid

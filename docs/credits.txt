@@ -1,4 +1,4 @@
-Shoutit 2.x & 3.x:
+ShoutIt 2.x & 3.x:
 -------------------
 Gabriel Freinbichler
 Philippe Baudrion - UniGE/FTI: Zikula 1.3.x refactoring

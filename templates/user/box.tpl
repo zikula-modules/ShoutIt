@@ -1,5 +1,5 @@
 {* $Id$ *}
-{ajaxheader modname='Shoutit' filename='Shoutit.js'}
+{ajaxheader modname='ShoutIt' filename='ShoutIt.js'}
 
  <div class="shoutit" id="shoutit_{$bid}">
 	<div class="shoutit_contentwrap" id="shoutit_contentwrap_{$bid}">
@@ -31,7 +31,7 @@
 	{/if}
 	<script type="text/javascript">
 	// <![CDATA[
-		var shoutit_{{$bid}} = new shoutit({{$bid}}, {{$modvars.Shoutit.shoutit_refresh_rate}}, {{$msgLength}}, {{$postPerm}}, {{$grpMsg}});
+		var shoutit_{{$bid}} = new shoutit({{$bid}}, {{$modvars.ShoutIt.shoutit_refresh_rate}}, {{$msgLength}}, {{$postPerm}}, {{$grpMsg}});
 	// ]]>
 	</script>
 	{* pndebug *}

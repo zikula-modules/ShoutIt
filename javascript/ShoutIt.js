@@ -1,5 +1,5 @@
 /**
- * Shoutit module for Zikula Application Framework
+ * ShoutIt module for Zikula Application Framework
  * @author       Gabriel Freinbichler
  *              refactored for zk 1.3 by Philippe Baudrion - UniGE/FTI
  */
@@ -23,7 +23,7 @@
 
         this.updater = new Ajax.PeriodicalUpdater(
                           'shoutitcontent_' + this.bid,
-                           Zikula.Config.baseURL + 'ajax.php?module=Shoutit&func=getmessages',
+                           Zikula.Config.baseURL + 'ajax.php?module=ShoutIt&func=getmessages',
                            {
                                method: 'post',
                                parameters: {bid: this.bid},
@@ -43,7 +43,7 @@
         if (((this.grpMsg == '1' && e != '-') && m != '') ||
             (this.grpMsg == '0' && m != '')) {
             new Zikula.Ajax.Request(
-                Zikula.Config.baseURL + "ajax.php?module=Shoutit&func=savemessages",
+                Zikula.Config.baseURL + "ajax.php?module=ShoutIt&func=savemessages",
                 {
                     method: 'post',
                     parameters:

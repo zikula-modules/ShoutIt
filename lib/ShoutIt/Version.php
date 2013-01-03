@@ -1,6 +1,6 @@
 <?php
 /**
- * Shoutit module for Zikula Application Framework
+ * ShoutIt module for Zikula Application Framework
  *
  * @author       Gabriel Freinbichler
  *              refactored for zk 1.3 by Philippe Baudrion - UniGE/FTI
@@ -9,14 +9,14 @@
  * @license      http://www.gnu.org/copyleft/gpl.html GNU General Public License
  * @version      $Id$
  */
-class Shoutit_Version extends Zikula_AbstractVersion
+class ShoutIt_Version extends Zikula_AbstractVersion
 {
     public function getMetaData()
     {
         $meta = array();
 
-        $meta['name']        = 'Shoutit';
-        $meta['displayname'] = $this->__('Shoutit');
+        $meta['name']        = 'ShoutIt';
+        $meta['displayname'] = $this->__('ShoutIt');
         $meta['description'] = $this->__('Ajax shoutbox');
         $meta['version']     = '3.0.0';
         $meta['url']          = $this->__('shoutit');
@@ -28,7 +28,7 @@ class Shoutit_Version extends Zikula_AbstractVersion
         $meta['official']    = 0;
         $meta['author']      = 'Gabriel Freinbichler & Philippe Baudrion - UniGE/FTI';
         $meta['contact']     = 'http://www.cmods-dev.de';
-        $meta['securityschema'] = array('Shoutit::' => 'gid::');
+        $meta['securityschema'] = array('ShoutIt::' => 'gid::');
         $meta['core_min']       = '1.3.0';
         $meta['core_max']       = '1.3.99';
 

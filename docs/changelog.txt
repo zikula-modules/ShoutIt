@@ -7,4 +7,4 @@
   - New features:   - Send a message to a specific group only
                     - Block settings available :    length of a message,
                                                     number of messages displayed,
-                                                    refresh rate (common to all Shoutit blocks)
+                                                    refresh rate (common to all ShoutIt blocks)
